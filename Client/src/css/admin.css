@@ -1,0 +1,92 @@
+.tableDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.shadowTable,
+.card {
+  box-shadow: 1px 2px 3px 2px rgba(25, 25, 25, 0.207);
+}
+
+.green {
+  background-color: #05b875 !important;
+  padding: 0 0 2.3rem 0;
+  color: white;
+  height: 130px;
+}
+
+.red {
+  background-color: #e45f4c !important;
+  padding: 0 0 2.3rem 0;
+  color: white;
+  height: 150px;
+}
+
+.blue {
+  background-color: #1b81e5 !important;
+  padding: 0 0 2.3rem 0;
+  color: white;
+  height: 130px;
+}
+
+.purple {
+  background-color: #6d67e4 !important;
+  padding: 0 0 1.1rem 0;
+  color: white;
+  height: 130px;
+}
+
+.icon {
+  font-size: 70pt;
+  float: right;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 15px;
+  right: 6px;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .icon {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.cardBottom {
+  padding: 5px;
+  font-size: 10pt;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: -10px;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover .cardBottom {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.forbidden {
+  cursor: not-allowed;
+}
+
+.mainTabs {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .blue {
+    margin: 1rem 0 0 0;
+  }
+
+  .icon {
+    font-size: 30pt;
+    top: 15px;
+    right: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,247 @@
+.vm__checkbox {
+  height: 1.7rem;
+  width: 2.7rem;
+  position: relative;
+}
+.vm__checkbox input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.vm__checkbox input:checked + .slider {
+  background-color: #2c3e50;
+}
+.vm__checkbox input:checked + .slider:before {
+  content: "\f186";
+  color: #2c3e50;
+  transform: translateX(1.5rem);
+}
+.vm__checkbox .slider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 3px;
+  background-color: #bdc3c7;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.22s ease;
+}
+.vm__checkbox .slider:before {
+  content: "\f185";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  color: #f48b30;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.4s;
+}
+
+/* Dark / Light Mode Scheme */
+.dark {
+  background-color: #191919;
+  transition: background-color 0.2s linear;
+}
+
+.dark .main {
+  background-color: #212429;
+  transition: background-color 0.2s linear;
+}
+
+.dark h1 {
+  color: rgb(255, 255, 255);
+  transition: background-color 0.2s linear;
+}
+
+.dark .copyright-area {
+  background-color: #131313;
+  transition: background-color 0.2s linear;
+}
+
+.dark .footer-section,
+.navbar {
+  background: #1a1c1e !important;
+  transition: background-color 0.2s linear;
+}
+
+.dark hr {
+  color: white;
+}
+
+.dark h5 {
+  color: white;
+  transition: background-color 0.2s linear;
+}
+
+.dark h4 {
+  color: rgb(226, 226, 226);
+  transition: background-color 0.2s linear;
+}
+
+.dark h1 span {
+  background-image: linear-gradient(to right, #212429 50%, transparent 50%),
+    linear-gradient(transparent 50%, #2a3973 50%);
+  background-color: transparent;
+  transition: background-color 0.2s linear;
+}
+
+.dark .product-card {
+  background-color: #1b1b1b;
+  transition: background-color 0.2s linear;
+  transition: transform 0.3s;
+}
+
+.dark .btn-dark {
+  background-color: #202d5f;
+  transition: background-color 0.2s linear;
+}
+
+.dark .categoryCard::before {
+  background: #5063af;
+}
+
+.dark .cards {
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.282));
+}
+
+.dark .search-Control {
+  background-color: rgb(29, 29, 29);
+  opacity: 0.4;
+  border: 1px solid rgb(110, 110, 110);
+  color: white;
+}
+
+.dark .input-group-text {
+  background-color: rgb(29, 29, 29);
+  opacity: 0.4;
+  border: 1px solid rgb(110, 110, 110);
+  color: white;
+}
+
+.dark a {
+  color: white !important;
+}
+
+.dark h2 {
+  color: white !important;
+}
+
+.dark .descClass {
+  color: #9d9d9d;
+}
+
+.dark h6 {
+  color: #9d9d9d;
+}
+
+.dark .alert {
+  background-color: #191919;
+  border: 1px solid rgb(31, 31, 31);
+}
+
+.dark .adminBtn {
+  background-color: #202d5f !important;
+  transition: background-color 0.2s linear;
+  color: white;
+}
+
+.dark .tableRow {
+  background-color: #303e76 !important;
+  transition: background-color 0.2s linear;
+}
+
+.dark td {
+  color: white !important;
+  transition: background-color 0.2s linear;
+}
+
+.dark tr {
+  color: white !important;
+  transition: background-color 0.2s linear;
+}
+
+.dark .dropdown-menu {
+  background-color: #6e6e6e !important;
+}
+
+.dark .dropdown-item {
+  background-color: #6e6e6e !important;
+}
+
+.dark .adminPanelLink {
+  color: #8598e7 !important;
+}
+
+.dark .cartContainer {
+  background-color: #212429 !important;
+}
+
+.dark .cartContainer2 {
+  background-color: #6e6e6e !important;
+}
+
+.dark .cartItemName {
+  color: #9d9d9d !important;
+  transition: background-color 0.2s linear;
+}
+
+.dark .accordion-item {
+  background-color: #212429;
+  transition: background-color 0.2s linear;
+}
+
+.dark .browseCat {
+  background-color: #202d5f !important;
+}
+
+.dark .tableRows {
+  background-color: #716c6c;
+}
+
+.dark .rate {
+  color: white;
+}
+
+.dark .profile-user-page {
+  background-color: #212429;
+}
+
+.dark .profileBtns {
+  background-color: #212429 !important;
+}
+
+.dark .form-select {
+  background-color: rgb(29, 29, 29) !important;
+  opacity: 0.4;
+  border: 1px solid rgb(110, 110, 110);
+  color: white !important;
+}
+
+.dark input {
+  background-color: rgb(29, 29, 29) !important;
+  opacity: 0.4;
+  border: 1px solid rgb(110, 110, 110);
+  color: white !important;
+}
+
+.dark textarea {
+  background-color: rgb(29, 29, 29) !important;
+  opacity: 0.4;
+  border: 1px solid rgb(110, 110, 110);
+  color: white !important;
+}
+
+.dark label {
+  color: white !important;
+}
+
+.dark .th {
+  color: black;
+}

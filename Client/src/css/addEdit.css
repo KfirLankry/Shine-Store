@@ -1,0 +1,11 @@
+.editProductImg,
+.newProductImg {
+  width: 40rem;
+  animation: fadeInRight 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+  .sideImg {
+    display: none;
+  }
+}
