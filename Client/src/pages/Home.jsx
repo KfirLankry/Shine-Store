@@ -8,6 +8,7 @@ import { getAllProducts } from "../services/productsService";
 import { Link } from "react-router-dom";
 import { errorMsg } from "../services/feedbackService";
 import Card from "../components/Card";
+import Loading from "../components/Loading";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -172,11 +173,7 @@ function Home() {
           </div>
         </div>
       ) : (
-        <div className="spinner">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
+        <Loading />
       )}
 
       <Footer />

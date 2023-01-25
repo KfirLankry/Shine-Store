@@ -9,6 +9,7 @@ import {
   deleteProductFromCart,
 } from "../services/cartService";
 import { errorMsg, successMsg } from "../services/feedbackService";
+import Loading from "../components/Loading";
 
 function Cart() {
   const [products, setProducts] = useState([]);
@@ -194,11 +195,7 @@ function Cart() {
           )}
         </div>
       ) : (
-        <div className="spinner">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
+        <Loading />
       )}
 
       <Footer />

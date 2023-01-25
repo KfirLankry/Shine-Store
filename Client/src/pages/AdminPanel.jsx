@@ -9,6 +9,7 @@ import { successMsg, errorMsg } from "../services/feedbackService";
 import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 import DeleteModal from "../components/DeleteModal";
+import Loading from "../components/Loading";
 
 function AdminPanel() {
   const userDetails = useContext(UserContext);
@@ -342,11 +343,7 @@ function AdminPanel() {
           {/* End Of TABS */}
         </div>
       ) : (
-        <div className="spinner">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
+        <Loading />
       )}
 
       <Footer />

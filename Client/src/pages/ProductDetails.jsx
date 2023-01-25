@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import ChoosenProduct from "./ChoosenProduct";
 // Bottom Component
 import RandomProducts from "../components/RandomProducts";
+import Loading from "../components/Loading";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -35,11 +36,7 @@ function ProductDetails() {
           <RandomProducts />
         </div>
       ) : (
-        <div className="spinner">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
+        <Loading />
       )}
 
       <Footer />
