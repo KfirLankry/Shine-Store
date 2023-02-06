@@ -5,26 +5,18 @@ import "../css/home.css";
 import { getProductsInCart } from "../services/cartService";
 import { successMsg, errorMsg } from "../services/feedbackService";
 import DarkModeToggle from "../components/DarkModeToggle";
-
-// Importing useContext Variables
 import { TokenContext, UserContext } from "../App";
 
 function Navbar(props) {
-  // Adding Token into setToken Variable via UseContext
   const setToken = useContext(TokenContext);
   const userDetails = useContext(UserContext);
   const [isChanged, setIsChanged] = useState(false);
   const [cart, setCart] = useState("");
   const navigate = useNavigate();
   const isLogged = sessionStorage.getItem("token");
-
-  // Getting CartChange props from Product Details Component and Listning to changes in useEffect Dependency
   const cartChange = props.cartChange;
-
-  // Getting cartRender props from Cart Component and Listning to changes in useEffect Dependency
   const cartRender = props.cartRender;
 
-  // LOGOUT
   const handleLogout = () => {
     setIsChanged(!isChanged);
     sessionStorage.removeItem("token");
@@ -35,7 +27,6 @@ function Navbar(props) {
 
   React.useEffect(() => {
     if (isLogged) {
-      // Get Products From Cart
       getProductsInCart()
         .then((result) => {
           setCart(result.data);
@@ -44,7 +35,6 @@ function Navbar(props) {
           errorMsg("Something went wrong.. Try Again!");
         });
     }
-    // Listning to cartChange (ProductDetails) and cartRender(Cart) and Updates Cart Badge in Navbar
   }, [isChanged, cartChange, cartRender]);
 
   return (

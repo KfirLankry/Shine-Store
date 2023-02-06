@@ -6,12 +6,10 @@ import "../css/loginRegister.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { errorMsg, successMsg } from "../services/feedbackService";
-// Importing useContext Variables
 import { useContext } from "react";
 import { TokenContext } from "../App";
 
 function Login() {
-  // Adding Token into setToken Variable via UseContext
   const setToken = useContext(TokenContext);
   const navigate = useNavigate();
   const formik = useFormik({

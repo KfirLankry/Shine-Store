@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { getAllProducts } from "../services/productsService";
 import Card from "./Card";
 
-// Components who pick 8 random Products
 function RandomProducts() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   React.useEffect(() => {
-    // Getting All Products InStore
     getAllProducts()
       .then((result) => {
         setProducts(result.data);
@@ -19,15 +17,11 @@ function RandomProducts() {
       });
   }, []);
 
-  // Shuffle the array
   const shuffledArray = products.sort(() => Math.random() - 0.5);
-
-  // Select the first 8 elements of the shuffled array
   const selectedElements = shuffledArray.slice(0, 8);
 
   return (
     <>
-      {/* Adds Spinner on Page While Data is Fetched */}
       {isLoading ? (
         <>
           <div className="container"></div>

@@ -14,15 +14,12 @@ import Loading from "../components/Loading";
 function Cart() {
   const [products, setProducts] = useState([]);
   const isLogged = sessionStorage.getItem("token");
-
-  // Updates Cart Badge After Deleting Product From Cart
   const [isChanged, setIsChanged] = useState(false);
   const [cart, setCart] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const tax = 15;
   const sum = cart ? cart.reduce((total, item) => total + item.price, 0) : null;
 
-  // Delete Products in cart
   const handleDelete = () => {
     setTimeout(() => {
       deleteProducts(cart)

@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import "../css/admin.css";
 import { getAllUsers } from "../services/userService";
 import { getAllProducts, deleteProduct } from "../services/productsService";
-// import { useState } from "react";
 import { successMsg, errorMsg } from "../services/feedbackService";
 import { Link } from "react-router-dom";
 import { UserContext } from "../App";
@@ -21,7 +20,6 @@ function AdminPanel() {
   const [isLoading, setIsLoading] = useState(false);
 
   React.useEffect(() => {
-    // Get All Users Details
     getAllUsers()
       .then((result) => {
         setUsers(result.data);
@@ -30,7 +28,6 @@ function AdminPanel() {
         errorMsg("Something went wrong.. Try Agian!");
       });
 
-    // Getting All Products InStore
     getAllProducts()
       .then((result) => {
         setProducts(result.data);
@@ -55,7 +52,6 @@ function AdminPanel() {
   return (
     <>
       <Navbar />
-      {/* Adds Spinner on Page While Data is Fetched */}
       {isLoading ? (
         <div className="container main ">
           {/* TABS */}
@@ -102,8 +98,7 @@ function AdminPanel() {
               aria-labelledby="pills-home-tab"
               tabIndex="0"
             >
-              {/* DASHBOARD */}
-              {/* Cards */}
+              {/* DASHBOARD */} {/* Cards */}
               {userDetails.isAdmin ? (
                 <div className="row my-2">
                   <div className="col">
@@ -209,7 +204,6 @@ function AdminPanel() {
               tabIndex="0"
             >
               {/* SEARCH BAR */}
-
               <div className="search pb-3">
                 <div className="input-group flex-nowrap">
                   <span className="input-group-text" id="addon-wrapping">

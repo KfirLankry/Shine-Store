@@ -11,7 +11,6 @@ function CurrentProduct(props) {
   const isLogged = sessionStorage.getItem("token");
   const [size, setSize] = useState("");
 
-  //  Add Product To Cart
   const HandleAddToCart = (product) => {
     if (!size) {
       errorMsg("Please Choose Size!");

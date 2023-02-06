@@ -41,7 +41,6 @@ function Register() {
       let user = { ...values, isAdmin: false };
       addUser(user)
         .then((result) => {
-          // Save Token to Session Storage
           sessionStorage.setItem("token", result.data.token);
           successMsg("Welcome! You registered successfully!");
           navigate("/");

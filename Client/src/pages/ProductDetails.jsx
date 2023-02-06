@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-// Top Component
 import ChoosenProduct from "./ChoosenProduct";
-// Bottom Component
 import RandomProducts from "../components/RandomProducts";
 import Loading from "../components/Loading";
 
@@ -14,8 +12,6 @@ function ProductDetails() {
   const api = import.meta.env.VITE_API_BASE_URL || "";
   const [products] = useFetch(`${api}products/${id}`);
   const [isLoading, setIsLoading] = useState(false);
-
-  // Update Cart icon When Adding New Product
   const [cartChange, setCartChange] = useState(false);
 
   React.useEffect(() => {

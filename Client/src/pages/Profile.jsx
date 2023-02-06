@@ -4,15 +4,12 @@ import { successMsg } from "../services/feedbackService";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-// Importing useContext Variables
 import { UserContext } from "../App";
 
 function Profile() {
-  // Adding User Data into userDetails Variable via UseContext
   const userDetails = useContext(UserContext);
   const navigate = useNavigate();
 
-  // LOGOUT
   const handleLogout = () => {
     sessionStorage.removeItem("token");
     successMsg("You Logged Out Successfully!");

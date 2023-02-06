@@ -10,7 +10,6 @@ function DarkModeToggle() {
 
   React.useEffect(() => {
     localStorage.setItem("DarkMode", JSON.stringify(darkMode));
-    // apply the dark theme by adding a dark class to the body element
     if (localStorage.getItem("DarkMode") == "true") {
       document.body.classList.add("dark");
       localStorage.setItem("DarkMode", darkMode);

@@ -27,7 +27,6 @@ function Product({ category }) {
   return (
     <>
       <Navbar />
-      {/* Adds Spinner on Page While Data is Fetched */}
       {isLoading ? (
         <div className="container main">
           {/* SEARCH BAR */}
@@ -58,7 +57,6 @@ function Product({ category }) {
                 })
                 .map((product) => {
                   return (
-                    // CARDS
                     <Card
                       _id={product._id}
                       image={product.image}

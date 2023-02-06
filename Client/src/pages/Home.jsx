@@ -13,18 +13,11 @@ import Loading from "../components/Loading";
 function Home() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
-  // Women Cloth Filter
   const womenCloth = products.filter((item) => item.category == "Women");
-
-  // Men Cloth Filter
   const menCloth = products.filter((item) => item.category == "Men");
-
-  // Kids & Babys Cloth Filter
   const kidsCloth = products.filter((item) => item.category == "Kids");
 
   React.useEffect(() => {
-    // Getting All Products
     getAllProducts()
       .then((result) => {
         setProducts(result.data);
@@ -38,7 +31,6 @@ function Home() {
   return (
     <>
       <Navbar />
-      {/* Adds Spinner on Page While Data is Fetched */}
       {isLoading ? (
         <div className="container main">
           {/* Categories Cards */}
@@ -61,7 +53,6 @@ function Home() {
               .filter((item, index) => index < 4)
               .map((product) => {
                 return (
-                  // CARDS
                   <Card
                     _id={product._id}
                     hot={product.hot}

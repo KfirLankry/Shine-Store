@@ -48,69 +48,40 @@ function App() {
   return (
     <div className="App">
       <ToastContainer />
-      {/* Wrapping / Passing Token & UserDetails to all components with UseContext */}
       <UserContext.Provider value={userDetails}>
         <TokenContext.Provider value={setToken}>
           <Router>
             <ScrollToTop />
             <Routes>
-              {/* HOME PAGE */}
               <Route path="/" element={<Home />} />
-
-              {/* REGISTER */}
               <Route path="/register" element={<Register />} />
-
-              {/* LOGIN */}
               <Route path="/login" element={<Login setToken={setToken} />} />
-
-              {/* WOMENS */}
               <Route path="/women" element={<Products category={"Women"} />} />
-
-              {/* MENS */}
               <Route path="/men" element={<Products category={"Men"} />} />
-
-              {/* KIDS */}
               <Route path="/kids" element={<Products category={"Kids"} />} />
-
-              {/* ACCECORIES */}
               <Route
                 path="/accecories"
                 element={<Products category={"Accecories"} />}
               />
-
-              {/* SHOES AND BEGS */}
               <Route
                 path="/shoes&bags"
                 element={<Products category={"Shoes & Bags"} />}
               />
-
-              {/* PLUS SIZE */}
               <Route
                 path="/plus-size"
                 element={<Products category={"Plus Size"} />}
               />
-
-              {/* ABOUT US */}
               <Route path="/about" element={<About />} />
-
-              {/* CART */}
               <Route path="/cart" element={<Cart />} />
-
-              {/* PROFILE (With Guard) */}
               <Route element={<UserProtectedRoutes user={userDetails} />}>
                 <Route path="/profile" element={<Profile />} />
               </Route>
-
-              {/* PRODUCT DETAILS */}
               <Route path="product/:id" element={<ProductDetails />} />
-
-              {/* PROTECTED ROUTES (ADMIN ONLY) */}
               <Route element={<AdminProtectedRoutes user={userDetails} />}>
                 <Route path="/admin-panel">
                   <Route index element={<AdminPanel />} />
                   <Route path="edit/:id" element={<EditProduct />} />
                 </Route>
-                {/* ADD NEW PRODUCT */}
                 <Route path="/add-product" element={<AddProduct />} />
               </Route>
 
