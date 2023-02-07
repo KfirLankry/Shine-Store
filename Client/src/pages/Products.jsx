@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { getAllProducts } from "../services/productsService";
-import Card from "./Card";
+import Card from "../components/Card";
 
 function Product({ category }) {
   const [products, setProducts] = useState([]);
@@ -51,9 +51,11 @@ function Product({ category }) {
             <div className="products mt-3">
               {products
                 .filter((item) => {
-                  return search.toLowerCase() == ""
+                  return search.toLowerCase() == "" ||
+                    search.toUpperCase() == ""
                     ? item
-                    : item.name.toLowerCase().includes(search);
+                    : item.name.toLowerCase().includes(search) ||
+                        item.name.toUpperCase().includes(search);
                 })
                 .map((product) => {
                   return (
